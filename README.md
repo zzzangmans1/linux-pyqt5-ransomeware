@@ -1,10 +1,20 @@
-# linux-pyqt5-ransomeware
+<h1 align="center">linux-pyqt5-ransomeware</h1>
 
-python 으로 제작된 GUI Ransomeware 입니다.
+<p align="center">
+    <a href="https://python.org">
+    <img src="https://img.shields.io/badge/Python-3.10.6-green.svg">
+  </a>
+  <a href="https://github.com/PushpenderIndia/nekros/releases">
+    <img src="https://img.shields.io/badge/Release-1.0-blue.svg">
+  </a>
+    <a href="https://github.com/PushpenderIndia/nekros">
+    <img src="https://img.shields.io/badge/Open%20Source-%E2%9D%A4-brightgreen.svg">
+  </a>
+</p>
 </br>
 test linux version : Ubuntu 22.04 ARM64
 </br> Date of Publish : 11/13/2022
-</br>Last Update : 11/13/2022
+</br> Last Update : 11/13/2022
 
 # Usage
 ```
