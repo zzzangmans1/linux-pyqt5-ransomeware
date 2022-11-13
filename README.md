@@ -6,7 +6,7 @@ test linux version : Ubuntu 22.04 ARM64
 </br> Date of Publish : 11/13/2022
 </br>Last Update : 11/13/2022
 
-프로그램 시작
+# 프로그램 
 ```
 python3 ransomeware.py
 ```
