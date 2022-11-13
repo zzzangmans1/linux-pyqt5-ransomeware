@@ -1,8 +1,10 @@
 # linux-pyqt5-ransomeware
-practice
-test linux version : Ubuntu 22.04 ARM64
 
-# 2022-11-13 Update
+python 으로 제작된 GUI Ransomeware 입니다.
+</br>
+test linux version : Ubuntu 22.04 ARM64
+</br> Date of Publish : 11/13/2022
+</br>Last Update : 11/13/2022
 
 프로그램 시작
 ```
