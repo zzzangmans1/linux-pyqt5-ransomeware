@@ -3,6 +3,7 @@ import timeit
 from PyQt5.QtWidgets import *
 from Crypto.Cipher import AES # AES using
 from Crypto.Util import Padding
+from PyQt5.QtGui import QColor
 
 def encryptFile(password, IV, infilename, outfilename):
 		key = password.encode()
@@ -58,7 +59,9 @@ class MyWidget(QWidget):
 			if(os.path.isfile(infilename)):
 				outfilename = infilename +'.enc'
 				time = encryptFile(key, iv, infilename, outfilename)
+				self.logtb.setTextColor(QColor(0x00, 0xFF, 0x00))
 				self.logtb.append('Encrypting> ' + infilename + ' -> ' + outfilename +'\t' + time)
+		self.logtb.setTextColor(QColor(0xFF, 0xFF, 0xFF))
 		self.logtb.append("===============================ENCRYPT FILE LIST===============================")
 		
 		self.decbtn.clicked.connect(self.decrypt)
@@ -132,9 +135,11 @@ class MyWidget(QWidget):
 			if(os.path.isfile(infilename)):
 				outfilename = infilename[:-4]
 				time = decryptFile(key, iv, infilename, outfilename)
-				self.logtb.append('Decrypting> ' + infilename + ' -> ' + outfilename + '\t' + time)	
+				self.logtb.setTextColor(QColor(0x00, 0xFF, 0x00))
+				self.logtb.append('Decrypting> ' + infilename + ' -> ' + outfilename + '\t' + time)
+		self.logtb.setTextColor(QColor(0xFF, 0xFF, 0xFF))
 		self.logtb.append("===============================DECRYPT FILE LIST===============================")
-
+       
 		QMessageBox.information(self, "Clear", inputkey)
 	
 class MyWindow(QMainWindow):
