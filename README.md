@@ -14,7 +14,7 @@
 </br>
 test linux version : Ubuntu 22.04 ARM64
 </br> Date of Publish : 11/13/2022
-</br> Last Update : 11/14/2022
+</br> Last Update : 11/17/2022
 
 # Usage
 ```
