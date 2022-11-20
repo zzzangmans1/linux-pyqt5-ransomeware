@@ -56,6 +56,7 @@ class MyWidget(QWidget):
 		
 		self.logtb.append("===============================ENCRYPT FILE LIST===============================")
 		for infilename in glob.iglob(encstartPath, recursive=True):
+			print(infilename)
 			if(os.path.isfile(infilename)):
 				outfilename = infilename +'.mokpo'
 				time = encryptFile(key, iv, infilename, outfilename)
@@ -133,7 +134,7 @@ class MyWidget(QWidget):
 		self.logtb.append("===============================DECRYPT FILE LIST===============================")
 		for infilename in glob.iglob(decstartPath, recursive=True):
 			if(os.path.isfile(infilename)):
-				outfilename = infilename[:-4]
+				outfilename = infilename[:-6]
 				time = decryptFile(key, iv, infilename, outfilename)
 				self.logtb.setTextColor(QColor(0x00, 0xFF, 0x00))
 				self.logtb.append('Decrypting> ' + infilename + ' -> ' + outfilename + '\t' + time)
