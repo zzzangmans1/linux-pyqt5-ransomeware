@@ -57,7 +57,7 @@ class MyWidget(QWidget):
 		self.logtb.append("===============================ENCRYPT FILE LIST===============================")
 		for infilename in glob.iglob(encstartPath, recursive=True):
 			if(os.path.isfile(infilename)):
-				outfilename = infilename +'.enc'
+				outfilename = infilename +'.mokpo'
 				time = encryptFile(key, iv, infilename, outfilename)
 				self.logtb.setTextColor(QColor(0x00, 0xFF, 0x00))
 				self.logtb.append('Encrypting> ' + infilename + ' -> ' + outfilename +'\t' + time)
@@ -139,7 +139,7 @@ class MyWidget(QWidget):
 				self.logtb.append('Decrypting> ' + infilename + ' -> ' + outfilename + '\t' + time)
 		self.logtb.setTextColor(QColor(0xFF, 0xFF, 0xFF))
 		self.logtb.append("===============================DECRYPT FILE LIST===============================")
-       
+
 		QMessageBox.information(self, "Clear", inputkey)
 	
 class MyWindow(QMainWindow):
@@ -156,8 +156,8 @@ class MyWindow(QMainWindow):
 		self.showMaximized()
 		
 key = 'my name is key12'
-encstartPath = '/home/parallels/Desktop/*.png'				
-decstartPath = '/home/parallels/Desktop/*.enc'
+encstartPath = '/home/**/*.png'				
+decstartPath = '/home/**/*.mokpo'
 iv = b'my name is iv123'
 
 if __name__ == "__main__" :
